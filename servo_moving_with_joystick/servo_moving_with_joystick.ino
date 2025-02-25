@@ -13,7 +13,7 @@ void loop() {
   int X_pos = analogRead(X_pin);
   // the 670 in the map function might have to be 1023
   // depending on the type of joystick your using
-  long servo_pos = map(X_pos, 0, 670, 0, 180);
+  long servo_pos = map(X_pos, 0, 1023, 0, 180);
   servo_pos = constrain(servo_pos, 0, 180);
   Serial.println(servo_pos);
   servo1.write(servo_pos);
