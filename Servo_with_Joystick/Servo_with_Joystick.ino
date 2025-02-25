@@ -16,16 +16,16 @@ void loop() {
   int X_pos = analogRead(X_pin);
   int Y_pos = analogRead(Y_pin);
 
-  if (X_pos >= 400){
+  if (X_pos >= 800){
     servo1.write(180);
     Serial.println("Turning Down");
-  }else if (X_pos <= 200){
+  }else if (X_pos <= 300){
     servo1.write(0);
     Serial.println("Turning Up");
-  }else if (Y_pos >= 400){
+  }else if (Y_pos >= 800){
     servo2.write(180);
     Serial.println("Turning Left");
-  }else if (Y_pos <= 200){
+  }else if (Y_pos <= 300){
     servo2.write(0);
     Serial.println("Turning Right");
   }else{
