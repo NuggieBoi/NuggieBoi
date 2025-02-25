@@ -12,9 +12,9 @@ void setup() {
 
 void loop() {
   int X_pos = analogRead(X_pin);
-  if (X_pos >= 400){
+  if (X_pos >= 800){
     servo_pos++;
-  }else if (X_pos <= 200){
+  }else if (X_pos <= 300){
     servo_pos--;
   }
 
